@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "text": "查看报表",
+    "iconCls": "icon-chart_curve_go",
+    "children": [
+      {
+        "id": 11,
+        "text": "学院学生数量比例饼状图",
+        "iconCls": "icon-chart_pie",
+        "attributes": {
+          "url": "jfreechart/pieChart3DColStuNum.jsp"
+        }
+      },
+      {
+        "id": 12,
+        "text": "楼宇学生数量比例饼状图",
+        "iconCls": "icon-chart_pie",
+        "attributes": {
+          "url": "jfreechart/pieChart3DBuildStuNum.jsp"
+        }
+      },
+       {
+        "id": 13,
+        "text": "学校男女比例饼图",
+        "iconCls": "icon-chart_pie",
+        "attributes": {
+          "url": "jfreechart/pieChart3DManWoman.jsp"
+        }
+      },
+       {
+        "id": 14,
+        "text": "楼宇类型柱状图",
+        "iconCls": "icon-chart_bar",
+        "attributes": {
+          "url": "jfreechart/barChartBuildType.jsp"
+        }
+      },
+       {
+        "id": 15,
+        "text": "宿舍类型比例饼状图",
+        "iconCls": "icon-chart_pie",
+        "attributes": {
+          "url": "jfreechart/pieChart3DDormType.jsp"
+        }
+      },
+       {
+        "id": 15,
+        "text": "学院专业数量比例柱状图",
+        "iconCls": "icon-chart_bar",
+        "attributes": {
+          "url": "jfreechart/barChartColProfNum.jsp"
+        }
+      }
+    ]
+  }
+]

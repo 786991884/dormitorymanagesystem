@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "text": "权限管理",
+    "iconCls": "icon-role",
+    "children": [
+      {
+        "id": 11,
+        "text": "资源管理",
+        "iconCls": "icon-settings ",
+        "attributes": {
+          "url": ""
+        }
+      },
+      {
+        "id": 12,
+        "text": "角色管理",
+        "iconCls": "icon-tux",
+        "attributes": {
+          "url": ""
+        }
+      },
+      {
+        "id": 13,
+        "text": "机构管理",
+        "iconCls": "icon-chart-organisation",
+        "attributes": {
+          "url": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "text": "文件管理",
+    "iconCls": "icon-file_manager",
+    "attributes": {
+      "url": ""
+    }
+  }
+]

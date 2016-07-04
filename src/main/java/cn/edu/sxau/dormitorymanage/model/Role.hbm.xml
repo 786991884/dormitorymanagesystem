@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-21 16:45:54 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="cn.edu.sxau.dormitorymanage.model.Role" table="T_ROLE">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+		<many-to-one name="role" class="cn.edu.sxau.dormitorymanage.model.Role">
+			<column name="PID" />
+		</many-to-one>
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<property name="remark" type="java.lang.String">
+			<column name="REMARK" />
+		</property>
+		<property name="seq" type="java.lang.Integer">
+			<column name="SEQ" />
+		</property>
+		<set name="roles" table="T_ROLE" inverse="true" lazy="true">
+			<key>
+				<column name="PID" />
+			</key>
+			<one-to-many class="cn.edu.sxau.dormitorymanage.model.Role" />
+		</set>
+		<set name="resources" table="T_ROLE_RESOURCE" inverse="false" lazy="true">
+			<key>
+				<column name="ROLE_ID" />
+			</key>
+			<many-to-many class="cn.edu.sxau.dormitorymanage.model.Resource" column="RESOURCE_ID"></many-to-many>
+		</set>
+		<set name="tusers" table="T_USER_ROLE" inverse="true" lazy="true">
+			<key>
+				<column name="ROLE_ID" />
+			</key>
+			<many-to-many class="cn.edu.sxau.dormitorymanage.model.Tuser" column="USER_ID"></many-to-many>
+		</set>
+	</class>
+</hibernate-mapping>

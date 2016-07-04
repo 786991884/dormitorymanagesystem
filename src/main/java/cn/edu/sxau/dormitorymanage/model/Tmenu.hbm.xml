@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-4-13 20:46:18 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="cn.edu.sxau.dormitorymanage.model.Tmenu" table="T_MENU">
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="45" />
+			<generator class="assigned" />
+		</id>
+		<many-to-one name="tmenu" class="cn.edu.sxau.dormitorymanage.model.Tmenu" fetch="select">
+			<column name="pid" length="45" />
+		</many-to-one>
+		<property name="text" type="java.lang.String">
+			<column name="TEXT" />
+		</property>
+		<property name="iconCls" type="java.lang.String">
+			<column name="ICONCLS" />
+		</property>
+		<property name="url" type="java.lang.String">
+			<column name="URL" />
+		</property>
+		<set name="tmenus" table="T_MENU" cascade="all" inverse="true" lazy="true">
+			<key>
+				<column name="pid" length="45" />
+			</key>
+			<one-to-many class="cn.edu.sxau.dormitorymanage.model.Tmenu" />
+		</set>
+	</class>
+</hibernate-mapping>

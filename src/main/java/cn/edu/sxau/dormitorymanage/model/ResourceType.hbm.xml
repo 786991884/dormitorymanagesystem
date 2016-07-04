@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-21 16:45:54 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="cn.edu.sxau.dormitorymanage.model.ResourceType" table="T_RESOURCETYPE">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<set name="resources" table="T_RESOURCE" inverse="true" lazy="true">
+			<key>
+				<column name="RESOURCETYPE_ID" />
+			</key>
+			<one-to-many class="cn.edu.sxau.dormitorymanage.model.Resource" />
+		</set>
+	</class>
+</hibernate-mapping>

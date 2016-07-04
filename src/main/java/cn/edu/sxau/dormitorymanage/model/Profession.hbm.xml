@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-29 13:56:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="cn.edu.sxau.dormitorymanage.model.Profession" table="T_PROFESSION">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<property name="telephone" type="java.lang.String">
+			<column name="TELEPHONE" />
+		</property>
+		<property name="memo" type="java.lang.String">
+			<column name="MEMO" />
+		</property>
+		<many-to-one name="college" class="cn.edu.sxau.dormitorymanage.model.College">
+			<column name="COLLEGE_ID" />
+		</many-to-one>
+		<set name="clazzs" table="CLAZZ" inverse="true" lazy="true">
+			<key>
+				<column name="COLLEGE_ID" />
+			</key>
+			<one-to-many class="cn.edu.sxau.dormitorymanage.model.Clazz" />
+		</set>
+	</class>
+</hibernate-mapping>

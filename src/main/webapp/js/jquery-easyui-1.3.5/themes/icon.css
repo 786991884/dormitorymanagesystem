@@ -1,0 +1,263 @@
+.icon-blank {
+	background: url('icons/blank.gif') no-repeat center center;
+}
+
+.icon-add {
+	background: url('icons/edit_add.png') no-repeat center center;
+}
+
+.icon-edit {
+	background: url('icons/pencil.png') no-repeat center center;
+}
+
+.icon-remove {
+	background: url('icons/edit_remove.png') no-repeat center center;
+}
+
+.icon-save {
+	background: url('icons/filesave.png') no-repeat center center;
+}
+
+.icon-cut {
+	background: url('icons/cut.png') no-repeat center center;
+}
+
+.icon-ok {
+	background: url('icons/ok.png') no-repeat center center;
+}
+
+.icon-no {
+	background: url('icons/no.png') no-repeat center center;
+}
+
+.icon-cancel {
+	background: url('icons/cancel.png') no-repeat center center;
+}
+
+.icon-reload {
+	background: url('icons/reload.png') no-repeat center center;
+}
+
+.icon-search {
+	background: url('icons/search.png') no-repeat center center;
+}
+
+.icon-print {
+	background: url('icons/print.png') no-repeat center center;
+}
+
+.icon-help {
+	background: url('icons/help.png') no-repeat center center;
+}
+
+.icon-undo {
+	background: url('icons/undo.png') no-repeat center center;
+}
+
+.icon-redo {
+	background: url('icons/redo.png') no-repeat center center;
+}
+
+.icon-back {
+	background: url('icons/back.png') no-repeat center center;
+}
+
+.icon-sum {
+	background: url('icons/sum.png') no-repeat center center;
+}
+
+.icon-tip {
+	background: url('icons/tip.png') no-repeat center center;
+}
+
+.icon-filter {
+	background: url('icons/filter.png') no-repeat center center;
+}
+
+.icon-menu {
+	background: url('icons/menu.png') no-repeat center center;
+}
+
+.icon-administrator {
+	background: url('icons/administrator.png') no-repeat center center;
+}
+
+.icon-group_key {
+	background: url('icons/group_key.png') no-repeat center center;
+}
+
+.icon-group {
+	background: url('icons/group.png') no-repeat center center;
+}
+
+.icon-group_add {
+	background: url('icons/group_add.png') no-repeat center center;
+}
+
+.icon-group_delete {
+	background: url('icons/group_delete.png') no-repeat center center;
+}
+
+.icon-group_edit {
+	background: url('icons/group_edit.png') no-repeat center center;
+}
+
+.icon-group_go {
+	background: url('icons/group_go.png') no-repeat center center;
+}
+
+.icon-application_home {
+	background: url('icons/application_home.png') no-repeat center center;
+}
+
+.icon-application_edit {
+	background: url('icons/application_edit.png') no-repeat center center;
+}
+
+.icon-user {
+	background: url('icons/user.png') no-repeat center center;
+}
+
+.icon-user_add {
+	background: url('icons/user_add.png') no-repeat center center;
+}
+
+.icon-user_delete {
+	background: url('icons/user_delete.png') no-repeat center center;
+}
+
+.icon-user_edit {
+	background: url('icons/user_edit.png') no-repeat center center;
+}
+
+.icon-user_go {
+	background: url('icons/user_go.png') no-repeat center center;
+}
+
+.icon-building {
+	background: url('icons/building.png') no-repeat center center;
+}
+
+.icon-building_go {
+	background: url('icons/building_go.png') no-repeat center center;
+}
+
+.icon-building_add {
+	background: url('icons/building-add.png') no-repeat center center;
+}
+
+.icon-building_delete {
+	background: url('icons/building-delete.png') no-repeat center center;
+}
+
+.icon-building_edit {
+	background: url('icons/building-edit.png') no-repeat center center;
+}
+
+.icon-table {
+	background: url('icons/table.png') no-repeat center center;
+}
+
+.icon-door {
+	background: url('icons/door.png') no-repeat center center;
+}
+
+.icon-user_female {
+	background: url('icons/user_female.png') no-repeat center center;
+}
+
+.icon-database_refresh {
+	background: url('icons/database_refresh.png') no-repeat center center;
+}
+
+.icon-exportexcel {
+	background: url('icons/exportexcel.png') no-repeat center center;
+}
+
+.icon-download {
+	background: url('icons/download.png') no-repeat center center;
+}
+
+.icon-export_excel {
+	background: url('icons/export_excel.png') no-repeat center center;
+}
+
+.icon-document_import {
+	background: url('icons/document_import.png') no-repeat center center;
+}
+
+.icon-chart_bar_link {
+	background: url('icons/chart_bar_link.png') no-repeat center center;
+}
+
+.icon-chart_curve_go {
+	background: url('icons/chart_curve_go.png') no-repeat center center;
+}
+
+.icon-chart_line {
+	background: url('icons/chart_line.png') no-repeat center center;
+}
+
+.icon-chart_pie {
+	background: url('icons/chart_pie.png') no-repeat center center;
+}
+
+.icon-role {
+	background: url('icons/role.png') no-repeat center center;
+}
+
+.icon-file_manager {
+	background: url('icons/file_manager.png') no-repeat center center;
+}
+
+.icon-tux {
+	background: url('icons/tux.png') no-repeat center center;
+}
+
+.icon-settings {
+	background: url('icons/settings.png') no-repeat center center;
+}
+
+.icon-chart-organisation {
+	background: url('icons/chart-organisation.png') no-repeat center center;
+}
+
+.icon-table_excel {
+	background: url('icons/table_excel.png') no-repeat center center;
+}
+
+.icon-table_add {
+	background: url('icons/table-add.png') no-repeat center center;
+}
+
+.icon-table_delete {
+	background: url('icons/table-delete.png') no-repeat center center;
+}
+
+.icon-table_edit {
+	background: url('icons/table-edit.png') no-repeat center center;
+}
+
+.icon-table_go {
+	background: url('icons/table-go.png') no-repeat center center;
+}
+
+.icon-table_save {
+	background: url('icons/table-save.png') no-repeat center center;
+}
+
+.icon-chart_bar {
+	background: url('icons/chart_bar.png') no-repeat center center;
+}
+
+.icon-mini-add {
+	background: url('icons/mini_add.png') no-repeat center center;
+}
+
+.icon-mini-edit {
+	background: url('icons/mini_edit.png') no-repeat center center;
+}
+
+.icon-mini-refresh {
+	background: url('icons/mini_refresh.png') no-repeat center center;
+}

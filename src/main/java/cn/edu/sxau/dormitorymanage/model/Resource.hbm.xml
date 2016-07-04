@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-21 16:45:54 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="cn.edu.sxau.dormitorymanage.model.Resource" table="T_RESOURCE">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+		<many-to-one name="resourceType" class="cn.edu.sxau.dormitorymanage.model.ResourceType">
+			<column name="RESOURCETYPE_ID" />
+		</many-to-one>
+		<many-to-one name="resource" class="cn.edu.sxau.dormitorymanage.model.Resource">
+			<column name="PID" />
+		</many-to-one>
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<property name="remark" type="java.lang.String">
+			<column name="REMARK" />
+		</property>
+		<property name="seq" type="java.lang.Integer">
+			<column name="SEQ" />
+		</property>
+		<property name="url" type="java.lang.String">
+			<column name="URL" />
+		</property>
+		<property name="icon" type="java.lang.String">
+			<column name="ICON" />
+		</property>
+		<set name="roles" table="T_ROLE_RESOURCE" inverse="true" lazy="true">
+			<key>
+				<column name="RESOURCE_ID" />
+			</key>
+			<many-to-many class="cn.edu.sxau.dormitorymanage.model.Role" column="ROLE_ID"></many-to-many>
+		</set>
+		<set name="resources" table="T_RESOURCE" inverse="true" lazy="true">
+			<key>
+				<column name="PID" />
+			</key>
+			<one-to-many class="cn.edu.sxau.dormitorymanage.model.Resource" />
+		</set>
+	</class>
+</hibernate-mapping>

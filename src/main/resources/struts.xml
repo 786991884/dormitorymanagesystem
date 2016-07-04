@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 指定由spring负责action对象的创建 -->
+	<constant name="struts.objectFactory" value="spring" />
+	<!-- 所有匹配*.action的请求都由struts2处理 -->
+	<constant name="struts.action.extension" value="action" />
+	<!-- 是否启用开发模式 -->
+	<constant name="struts.devMode" value="false" />
+	<!-- 配置主题 -->
+	<constant name="struts.ui.theme" value="simple" />
+	<!-- struts配置文件改动后，是否重新加载 -->
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<!-- 设置浏览器是否缓存静态内容 -->
+	<constant name="struts.serve.static.browserCache" value="true" />
+	<!-- 请求参数的编码方式 -->
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<!-- 每次HTTP请求系统都重新加载资源文件，有助于开发 -->
+	<constant name="struts.i18n.reload" value="false" />
+	<!-- 文件上传最大值 -->
+	<constant name="struts.multipart.maxSize" value="104857600" />
+	<!-- 让struts2支持动态方法调用 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<!-- Action名称中是否可使用斜线 -->
+	<constant name="struts.enable.SlashesInActionNames" value="false" />
+	<!-- 允许标签中使用表达式语法 -->
+	<constant name="struts.tag.altSyntax" value="true" />
+
+	<package name="basePackage" namespace="/" extends="struts-default ">
+		<interceptors>
+			<!-- 字符集拦截器 -->
+			<interceptor name="encodingInterceptor" class="cn.edu.sxau.dormitorymanage.interceptor.EncodingInterceptor"></interceptor>
+			<interceptor name="securityInterceptor" class="cn.edu.sxau.dormitorymanage.interceptor.SecurityInterceptor"></interceptor>
+			<interceptor name="loginInterceptor" class="cn.edu.sxau.dormitorymanage.interceptor.LoginInterceptor"></interceptor>
+			<interceptor-stack name="mystack">
+				<!-- <interceptor-ref name="loginInterceptor"></interceptor-ref> -->
+				<!-- <interceptor-ref name="encodingInterceptor"></interceptor-ref> -->
+				<interceptor-ref name="securityInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack">
+					<param name="modelDriven.refreshModelBeforeResult">true</param>
+				</interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="mystack" />
+		<global-results>
+			<result name="index">/error/noSession.jsp</result>
+			<result name="noSecurity">/error/noSecurity.jsp</result>
+		</global-results>
+		<action name="baseAction" class="baseAction"></action>
+		<action name="bedAction" class="bedAction">
+			<result name="bed">/dorm/cwgl.jsp</result>
+		</action>
+		<action name="buildingAction" class="buildingAction">
+			<result name="building">/dorm/lygl.jsp</result>
+		</action>
+		<action name="clazzAction" class="clazzAction">
+			<result name="clazz">/stu/bjgl.jsp</result>
+		</action>
+		<action name="collegeAction" class="collegeAction">
+			<result name="college">/dorm/xygl.jsp</result>
+		</action>
+		<action name="dormitoryAction" class="dormitoryAction">
+			<result name="dormitory">/dorm/ssgl.jsp</result>
+		</action>
+		<action name="menuAction" class="menuAction"></action>
+		<action name="professionAction" class="professionAction">
+			<result name="profession">/stu/zygl.jsp</result>
+		</action>
+		<action name="staffAction" class="staffAction">
+			<result name="staff">/dorm/zggl.jsp</result>
+		</action>
+		<action name="studentAction" class="studentAction">
+			<result name="student">/stu/xsgl.jsp</result>
+		</action>
+		<action name="downloadTemplateAction" class="downloadTemplateAction"></action>
+		<action name="fileDownloadAction" class="fileDownloadAction">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename="下载模版.xls"</param>
+				<param name="inputName">downloadFile</param>
+				<param name="bufferSize">2048</param>
+			</result>
+		</action>
+		<action name="userAction" class="userAction">
+			<result name="user">/admin/user.jsp</result>
+			<result name="userAdd">/admin/userAdd.jsp</result>
+			<result name="userEdit">/admin/userEdit.jsp</result>
+			<result name="userEditPwd">/admin/userEditPwd.jsp</result>
+			<result name="userGrant">/admin/userGrant.jsp</result>
+			<result name="userRole">/user/userRole.jsp</result>
+			<result name="userResource">/user/userResource.jsp</result>
+		</action>
+		<action name="resourceAction" class="resourceAction">
+			<result name="resource">/admin/resource.jsp</result>
+			<result name="resourceAdd">/admin/resourceAdd.jsp</result>
+			<result name="resourceEdit">/admin/resourceEdit.jsp</result>
+		</action>
+		<action name="roleAction" class="roleAction">
+			<result name="role">/admin/role.jsp</result>
+			<result name="roleAdd">/admin/roleAdd.jsp</result>
+			<result name="roleEdit">/admin/roleEdit.jsp</result>
+			<result name="roleGrant">/admin/roleGrant.jsp</result>
+		</action>
+		<action name="initAction" class="initAction"></action>
+	</package>
+	<package name="uploadpackage" extends="json-default">
+		<action name="uploadAction" class="uploadAction">
+			<result type="json" name="success">
+				<param name="contentType">text/html</param>
+				<param name="root">message</param>
+			</result>
+			<result type="json" name="error">
+				<param name="contentType">text/html</param>
+				<param name="root">message</param>
+			</result>
+		</action>
+	</package>
+	<package name="jfreechart" extends="jfreechart-default" namespace="/">
+		<action name="createBarChartAction" class="createBarChartAction">
+			<result type="chart">
+				<param name="height">500</param>
+				<param name="width">900</param>
+			</result>
+		</action>
+		<action name="chartAction" class="chartAction">
+			<result type="chart">
+				<param name="height">500</param>
+				<param name="width">900</param>
+			</result>
+		</action>
+	</package>
+</struts>
