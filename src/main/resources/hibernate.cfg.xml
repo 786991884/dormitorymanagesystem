@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="jdbc:mysql://localhost:3306/dormitorymanage"/>
+        <property name="com.mysql.jdbc.Driver"/>
+        <property name="root"/>
+        <property name="123456"/>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+        <!--<mapping package="cn.edu.sxau.dormitorymanage.model"></mapping>-->
+        <mapping resource="cn/edu/sxau/dormitorymanage/model/Bed.hbm.xml"/>
+        <mapping resource="cn/edu/sxau/dormitorymanage/model/Building.hbm.xml"/>
+        <mapping resource="cn/edu/sxau/dormitorymanage/model/Clazz.hbm.xml"/>
+        <mapping resource="cn/edu/sxau/dormitorymanage/model/College.hbm.xml"/>
+        <mapping resource="cn/edu/sxau/dormitorymanage/model/Dormitory.hbm.xml"/>
+        <mapping resource="cn/edu/sxau/dormitorymanage/model/Profession.hbm.xml"/>
+        <mapping resource="cn/edu/sxau/dormitorymanage/model/Resource.hbm.xml"/>
+        <mapping resource="cn/edu/sxau/dormitorymanage/model/ResourceType.hbm.xml"/>
+        <mapping resource="cn/edu/sxau/dormitorymanage/model/Role.hbm.xml"/>
+        <mapping resource="cn/edu/sxau/dormitorymanage/model/Staff.hbm.xml"/>
+        <mapping resource="cn/edu/sxau/dormitorymanage/model/Student.hbm.xml"/>
+        <mapping resource="cn/edu/sxau/dormitorymanage/model/Tmenu.hbm.xml"/>
+        <mapping resource="cn/edu/sxau/dormitorymanage/model/Tuser.hbm.xml"/>
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
